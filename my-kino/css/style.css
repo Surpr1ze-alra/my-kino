@@ -60,9 +60,9 @@ input {
 .grid {
     display: grid;
     grid-template-areas: 
-    "my-header my-header"
-    "my-aside my-main"
-    "my-aside my-main";
+    "my-header my-header my-header"
+    "my-aside my-main my-main"
+    "my-aside my-main my-main";
     grid-template-columns:repeat (auto-fit, minmax(12rem, 1fr));
     gap: 8rem 5.9rem;
 }
@@ -80,11 +80,15 @@ input {
 
 .header_logo {
     font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 117%;
     margin-right: 7rem;
 }
 
 .header_nav {
     margin-right: 7rem;
+    font-weight: 500;
+    line-height: 117%;
 }
 
 .header_nav a {
@@ -112,6 +116,8 @@ input {
     padding-left: 1rem;
     padding-right: 4rem;
     font-size: 2rem;
+    font-weight: 400;
+    line-height: 115%;
     color:#fff;
 }
 .header_find input::placeholder {
@@ -126,16 +132,217 @@ input {
 
 .header_hours {
     font-size: 2rem;
+    line-height: 115%;
 }
 
 .header_days {
     font-size: 1.2rem;
+    line-height: 117%;
 }
 
 .header_personal {
     width: 6rem;
     height: 6rem;
     border-radius: 50%
+}
+.main-display_trailer {
+    position: relative;
+    width: 98.5%;
+    height: 20.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(../img/unsplash_o4c2zoVhjSw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    padding: 1.9rem 0 1.9rem 1.9rem;
+}
+
+.main-display_views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.main-display_header {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 150%;
+}
+
+.main-display_date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.button-play_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.3);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-play {
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid rgba(255,255,255,0.07);
+    border-left: 2.5rem solid #fff;
+    border-bottom: 1.5rem solid rgba(255,255,255,0.07);
+    border-radius: 0.2rem
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-right: 1rem;
+}
+
+.title_left, .title_rigth {
+    display: flex;
+    align-items: center;
+}
+
+.title_main {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.title_count {
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    line-height: 115%;
+    padding-top: 0.3rem;
+}
+
+.title_rigth span {
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.title_rigth img {
+    width: 2rem;
+    height: 1.6rem;
+    margin-left: 0.4rem;
+}
+
+.trending, .popular {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1.6rem;
+}
+
+.trending_item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 47%;
+    height: 25.1rem;
+    border-radius: 1.6rem;
+    background: url(../img/unsplash_phIFdC6lA4E.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.trending_header {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.trending_date {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;  
+}
+
+.trending_footer, .popular_footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 1rem 1.8rem 6.4rem;
+    border-radius: 1.6rem;
+    background: rgba(255,255,255,0.3);
+}
+
+.trending_time {
+    padding: .4rem 1.3rem;
+    background: #fff;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: #000
+}
+
+.trending_plash {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 1.6rem;
+    padding: .4rem 1.3rem;
+}
+
+.small {
+    width: 5rem;
+    height: 5rem;
+    left: 7%;
+}
+
+.small-plus {
+    width: 3rem;
+    height: 3rem;
+    left: 10%;
+}
+
+.button-play_wrap.small .button-play {
+    width: 0;
+    height: 0;
+    border-top: 1rem solid rgba(255,255,255,0.07);
+    border-left: 1.5rem solid #fff;
+    border-bottom: 1rem solid rgba(255,255,255,0.07);
+    border-radius: 0.2rem
+}
+
+.button-play_wrap.small-plus .button-play {
+    width: 0;
+    height: 0;
+    border-top: .5rem solid rgba(255,255,255,0.07);
+    border-left: 1rem solid #fff;
+    border-bottom: .5rem solid rgba(255,255,255,0.07);
+    border-radius: 0.2rem
+}
+
+.popular_item {
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    height: 19.2rem;
+    border-radius: 1.6rem;
+    background: url(../img/unsplash_11SgH7U6TmI.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
